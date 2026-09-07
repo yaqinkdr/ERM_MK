@@ -37,11 +37,6 @@ Aplikasi desktop berbasis Python untuk pencatatan rekam medis santri, dengan fit
 ## Teknologi yang Digunakan
 
 - Python 3.x
-- Tkinter (GUI)
-- ReportLab (PDF)
-- CSV (penyimpanan data)
-- ZIP (backup)
-
 ---
 
 ## Struktur File
@@ -49,10 +44,10 @@ Aplikasi desktop berbasis Python untuk pencatatan rekam medis santri, dengan fit
 | File/Folder | Fungsi |
 |-------------|--------|
 | `erm_pesantren_final.py` | File utama program |
-| `pasien.csv` | Data pasien (ID, nama, umur, JK) |
-| `rekam_medis.csv` | Data rekam medis (SOAP, vital signs, resep, file penunjang) |
-| `dataObat.csv` | Daftar obat dan harga |
-| `data/` | Folder penyimpanan file penunjang (terstruktur per ID pasien) |
+| `pasien.csv` | Data pasien (ID, nama, umur, JK), dibuat otomatis saat simpan pasien |
+| `rekam_medis.csv` | Data rekam medis (SOAP, vital signs, resep, file penunjang), dibuat otomatis |
+| `dataObat.csv` | Daftar obat dan harga, dibuat otomatis jika belum ada |
+| `data/` | Folder penyimpanan file penunjang (terstruktur per ID pasien), dibuat otomatis |
 | `backup/` | Folder hasil backup (dibuat otomatis saat backup) |
 | `rekam_medis_[ID].pdf` | PDF rekam medis per pasien (dihasilkan saat cetak) |
 
@@ -60,15 +55,14 @@ Aplikasi desktop berbasis Python untuk pencatatan rekam medis santri, dengan fit
 
 ## Cara Instalasi
 
-### 1. Clone atau download repository ini
-
-```bash
-git clone https://github.com/[username]/e-rekam-medis.git
-cd e-rekam-medis
-```
+### 1. Download ERM_MK.py
 
 ### 2. Install dependensi
-
+Tentunya sebelumnya pastikan python ada dulu, kalo belum ada download di https://www.python.org/
+```bash
+python --version
+```
+kalo python sudah ada, lanjut install dependensi
 ```bash
 pip install reportlab
 ```
