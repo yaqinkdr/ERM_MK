@@ -78,7 +78,7 @@ pip install reportlab
 ### 3. Jalankan program
 
 ```bash
-python erm_pesantren_final.py
+python ERM_MK.py
 ```
 
 ---
